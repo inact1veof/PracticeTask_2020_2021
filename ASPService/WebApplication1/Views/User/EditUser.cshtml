@@ -1,0 +1,64 @@
+﻿@model WebApplication1.Models.AspNetUser
+@{
+    ViewBag.Title = "Редактирование данных пользователя";
+}
+
+<h2>@ViewBag.Title</h2>
+@using (Html.BeginForm("EditUser", "User", FormMethod.Post))
+{
+<fieldset>
+    @Html.HiddenFor(m => m.Id)
+    @Html.HiddenFor(m => m.CompanyId)
+    @Html.HiddenFor(m => m.Email)
+    @Html.HiddenFor(m => m.BirthDate)
+    <div class="form-group">
+        @Html.LabelFor(m => m.Id, "Id", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Id, new { disabled = "disabled", @class = "form-control" })
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name, "Имя", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(m => m.Surname, "Фамилия", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Surname, new { @class = "form-control" })
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(m => m.DepartamentId, "Отдел", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.DepartamentId, ViewBag.Departaments as SelectList, new { @class = "form-control" })
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(m => m.PositionId, "Должность", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.PositionId, ViewBag.Positions as SelectList, new { @class = "form-control" })
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Обновить данные сотрудника" />
+        </div>
+    </div>
+</fieldset>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

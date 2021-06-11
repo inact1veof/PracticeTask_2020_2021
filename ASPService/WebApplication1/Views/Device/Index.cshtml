@@ -1,0 +1,41 @@
+﻿
+@model IEnumerable<WebApplication1.Models.OutputDevice>
+@{
+    ViewBag.Title = "Управление приборами учета";
+}
+
+<h2>@ViewBag.Title <button type="button" onclick="location.href = '@Url.Action("CreateDevice")'" style="font-size:18px; float:right" class=" btn btn-default">Добавить прибор учета</button></h2>
+<table class="table">
+    <tr>
+        <th width="10%">
+            Id
+        </th>
+        <th width="30%">
+            Название
+        </th>
+        <th width="30%">
+            Нагрузка
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Burden_Name)<p>(id:@Html.DisplayFor(modelItem => item.Burden_Id))</p>
+            </td>
+            <td>
+                @Html.ActionLink("Управление данными |", "ManageValues", new { id = item.Id, name = item.Name, burden_id = item.Burden_Id })
+                @Html.ActionLink(" Редактировать |", "EditDevice", new { id = item.Id, name = item.Name, burden_id = item.Burden_Id })
+                @Html.ActionLink(" Удалить", "DeleteDevice", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>
+

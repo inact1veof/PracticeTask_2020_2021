@@ -1,0 +1,66 @@
+﻿@model IEnumerable < WebApplication1.Models.SuperUser>
+@{
+    ViewBag.Title = "Управление пользователями";
+}
+
+<h2>@ViewBag.Title <button type="button" onclick="location.href = '@Url.Action("CreateUser")'" style="font-size:18px; float:right" class=" btn btn-default">Добавить сотрудника</button></h2>
+<table class="table">
+    <tr>
+        <th>
+            Имя
+        </th>
+        <th>
+            Фамилия
+        </th>
+        <th>
+            Дата рождения
+        </th>
+        <th>
+            Компания
+        </th>
+        <th>
+            Отдел
+        </th>
+        <th>
+            Должность
+        </th>
+        <th>
+            Электронная почта
+        </th>
+        <th>
+            Действие
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Surname)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.BirthDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Company)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Departament)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Position)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Email)
+    </td>
+    <td>
+        @Html.ActionLink("Редактировать |", "EditUser", new { id = item.Id })
+        @Html.ActionLink(" Удалить", "DeleteUser", new { id = item.Id })
+    </td>
+</tr>
+    }
+</table>
+

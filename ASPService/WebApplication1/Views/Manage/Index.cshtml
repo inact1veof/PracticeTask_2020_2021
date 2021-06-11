@@ -1,0 +1,76 @@
+﻿@model WebApplication1.Models.SuperUser
+@{
+    ViewBag.Title = "Просмотр профиля";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p class="text-success">@ViewBag.StatusMessage</p>
+<div>
+    <table class="table">       
+        <tr>
+            <td>
+                Имя:
+            </td>
+            <td>
+                @Model.Name
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Фамилия:
+            </td>
+            <td>
+                @Model.Surname
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Дата рождения:
+            </td>
+            <td>
+                @Model.BirthDate
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Компания:
+            </td>
+            <td>
+                @Model.Company
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Отдел:
+            </td>
+            <td>
+                @Model.Departament
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Должность
+            </td>
+            <td>
+                @Model.Position
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Эл.Почта
+            </td>
+            <td>
+                @Model.Email
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Пароль:
+            </td>
+            <td>
+                @Html.ActionLink("Смена пароля", "ChangePassword")
+            </td>
+        </tr>
+    </table>
+</div>

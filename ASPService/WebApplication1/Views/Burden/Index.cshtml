@@ -1,0 +1,40 @@
+﻿@model IEnumerable<WebApplication1.Models.Burden>
+@{
+    ViewBag.Title = "Управление нагрузками";
+}
+
+<h2>@ViewBag.Title <button type="button" onclick="location.href = '@Url.Action("CreateBurden")'" style="font-size:18px; float:right" class=" btn btn-default">Добавить нагрузку</button></h2>
+<table class="table">
+    <tr>
+        <th width="10%">
+            Id
+        </th>
+        <th width="30%">
+            Название
+        </th>
+        <th width="30%">
+            Компания
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                <p>@ViewBag.CompanyName</p>
+            </td>
+            <td>
+                @Html.ActionLink("Редактировать |", "EditBurden", new { id = item.Id, name = item.Name, company_id = item.Company_Id })
+                @Html.ActionLink(" Удалить", "DeleteBurden", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>
+
+

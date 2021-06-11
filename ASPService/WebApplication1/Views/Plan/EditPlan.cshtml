@@ -1,0 +1,32 @@
+﻿@model IEnumerable < WebApplication1.Models.PlanValues>
+@{
+    ViewBag.Title = "Просмотр и редактирование плана";
+}
+
+<h2>@ViewBag.Title</h2>
+<table class="table">
+    <tr>
+        <th width="30%">
+            Время
+        </th>
+        <th width="30%">
+            Значение
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateTime.TimeOfDay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Value)
+            </td>
+            <td>
+                @Html.ActionLink("Изменить", "EditValue", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>
+

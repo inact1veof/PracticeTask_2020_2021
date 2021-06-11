@@ -1,0 +1,932 @@
+t=2021-03-27T14:40:39+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-03-27T14:40:39+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1ve\\Desktop\\grafana-7.5.1/conf/defaults.ini
+t=2021-03-27T14:40:39+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1ve\\Desktop\\grafana-7.5.1
+t=2021-03-27T14:40:39+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1ve\\Desktop\\grafana-7.5.1\\data
+t=2021-03-27T14:40:39+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1ve\\Desktop\\grafana-7.5.1\\data\\log
+t=2021-03-27T14:40:39+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1ve\\Desktop\\grafana-7.5.1\\data\\plugins
+t=2021-03-27T14:40:39+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1ve\\Desktop\\grafana-7.5.1\\conf\\provisioning
+t=2021-03-27T14:40:39+0500 lvl=info msg="App mode production" logger=settings
+t=2021-03-27T14:40:39+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-03-27T14:40:39+0500 lvl=info msg="Creating SQLite database file" logger=sqlstore path=C:\\Users\\inact1ve\\Desktop\\grafana-7.5.1\\data\\grafana.db
+t=2021-03-27T14:40:39+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create migration_log table"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create user table"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="add unique index user.login"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="add unique index user.email"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_user_login - v1"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_user_email - v1"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Rename table user to user_v1 - v1"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create user table v2"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create index UQE_user_login - v2"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create index UQE_user_email - v2"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="copy data_source v1 to v2"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Drop old table user_v1"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Add column help_flags1 to user table"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Update user table charset"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Add last_seen_at column to user"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Add missing user data"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Add is_disabled column to user"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Add index user.login/user.email"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create temp user table v1-7"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_email - v1-7"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_org_id - v1-7"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_code - v1-7"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_status - v1-7"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Update temp_user table charset"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_temp_user_email - v1"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_temp_user_org_id - v1"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_temp_user_code - v1"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_temp_user_status - v1"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Rename table temp_user to temp_user_tmp_qwerty - v1"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create temp_user v2"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_email - v2"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_org_id - v2"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_code - v2"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_status - v2"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="copy temp_user v1 to v2"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="drop temp_user_tmp_qwerty"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Set created for temp users that will otherwise prematurely expire"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create star table"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="add unique index star.user_id_dashboard_id"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create org table v1"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create index UQE_org_name - v1"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create org_user table v1"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create index IDX_org_user_org_id - v1"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create index UQE_org_user_org_id_user_id - v1"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Update org table charset"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Update org_user table charset"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Migrate all Read Only Viewers to Viewers"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create dashboard table"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="add index dashboard.account_id"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_account_id_slug"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create dashboard_tag table"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_tag.dasboard_id_term"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_dashboard_tag_dashboard_id_term - v1"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Rename table dashboard to dashboard_v1 - v1"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create dashboard v2"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create index IDX_dashboard_org_id - v2"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create index UQE_dashboard_org_id_slug - v2"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="copy dashboard v1 to v2"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="drop table dashboard_v1"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="alter dashboard.data to mediumtext v1"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Add column updated_by in dashboard - v2"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Add column created_by in dashboard - v2"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Add column gnetId in dashboard"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Add index for gnetId in dashboard"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Add column plugin_id in dashboard"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Add index for plugin_id in dashboard"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Add index for dashboard_id in dashboard_tag"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Update dashboard table charset"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Update dashboard_tag table charset"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Add column folder_id in dashboard"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Add column isFolder in dashboard"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Add column has_acl in dashboard"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Add column uid in dashboard"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Update uid column values in dashboard"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Add unique index dashboard_org_id_uid"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Remove unique index org_id_slug"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Update dashboard title length"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="Add unique index for dashboard_org_id_title_folder_id"
+t=2021-03-27T14:40:39+0500 lvl=info msg="Executing migration" logger=migrator id="create dashboard_provisioning"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Rename table dashboard_provisioning to dashboard_provisioning_tmp_qwerty - v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create dashboard_provisioning v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create index IDX_dashboard_provisioning_dashboard_id - v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create index IDX_dashboard_provisioning_dashboard_id_name - v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="copy dashboard_provisioning v1 to v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="drop dashboard_provisioning_tmp_qwerty"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add check_sum column"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add index for dashboard_title"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="delete tags for deleted dashboards"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="delete stars for deleted dashboards"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create data_source table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index data_source.account_id"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add unique index data_source.account_id_name"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_data_source_account_id - v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_data_source_account_id_name - v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Rename table data_source to data_source_v1 - v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create data_source table v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create index IDX_data_source_org_id - v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create index UQE_data_source_org_id_name - v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="copy data_source v1 to v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Drop old table data_source_v1 #2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add column with_credentials"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add secure json data column"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Update data_source table charset"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Update initial version to 1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add read_only data column"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Migrate logging ds to loki ds"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Update json_data with nulls"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add uid column"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Update uid value"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add unique index datasource_org_id_uid"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add unique index datasource_org_id_is_default"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create api_key table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index api_key.account_id"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index api_key.key"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index api_key.account_id_name"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_api_key_account_id - v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_api_key_key - v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_api_key_account_id_name - v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Rename table api_key to api_key_v1 - v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create api_key table v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create index IDX_api_key_org_id - v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create index UQE_api_key_key - v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create index UQE_api_key_org_id_name - v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="copy api_key v1 to v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Drop old table api_key_v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Update api_key table charset"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add expires to api_key table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create dashboard_snapshot table v4"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="drop table dashboard_snapshot_v4 #1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create dashboard_snapshot table v5 #2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create index UQE_dashboard_snapshot_key - v5"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create index UQE_dashboard_snapshot_delete_key - v5"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create index IDX_dashboard_snapshot_user_id - v5"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="alter dashboard_snapshot to mediumtext v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Update dashboard_snapshot table charset"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add column external_delete_url to dashboard_snapshots table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add encrypted dashboard json column"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Change dashboard_encrypted column to MEDIUMBLOB"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create quota table v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create index UQE_quota_org_id_user_id_target - v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Update quota table charset"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create plugin_setting table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create index UQE_plugin_setting_org_id_plugin_id - v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add column plugin_version to plugin_settings"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Update plugin_setting table charset"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create session table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Drop old table playlist table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Drop old table playlist_item table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create playlist table v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create playlist item table v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Update playlist table charset"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Update playlist_item table charset"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="drop preferences table v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="drop preferences table v3"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create preferences table v3"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Update preferences table charset"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add column team_id in preferences"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Update team_id column values in preferences"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create alert table v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index alert org_id & id "
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index alert state"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index alert dashboard_id"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Create alert_rule_tag table v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add unique index alert_rule_tag.alert_id_tag_id"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_alert_rule_tag_alert_id_tag_id - v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Rename table alert_rule_tag to alert_rule_tag_v1 - v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Create alert_rule_tag table v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create index UQE_alert_rule_tag_alert_id_tag_id - Add unique index alert_rule_tag.alert_id_tag_id V2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="copy alert_rule_tag v1 to v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="drop table alert_rule_tag_v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create alert_notification table v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add column is_default"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add column frequency"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add column send_reminder"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add column disable_resolve_message"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index alert_notification org_id & name"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Update alert table charset"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Update alert_notification table charset"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create notification_journal table v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index notification_journal org_id & alert_id & notifier_id"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="drop alert_notification_journal"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create alert_notification_state table v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index alert_notification_state org_id & alert_id & notifier_id"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add for to alert table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add column uid in alert_notification"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Update uid column values in alert_notification"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add unique index alert_notification_org_id_uid"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Remove unique index org_id_name"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add column secure_settings in alert_notification"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="alter alert.settings to mediumtext"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add non-unique index alert_notification_state_alert_id"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add non-unique index alert_rule_tag_alert_id"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Drop old annotation table v4"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create annotation table v5"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index annotation 0 v3"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index annotation 1 v3"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index annotation 2 v3"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index annotation 3 v3"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index annotation 4 v3"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Update annotation table charset"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add column region_id to annotation table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Drop category_id index"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add column tags to annotation table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Create annotation_tag table v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add unique index annotation_tag.annotation_id_tag_id"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_annotation_tag_annotation_id_tag_id - v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Rename table annotation_tag to annotation_tag_v2 - v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Create annotation_tag table v3"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create index UQE_annotation_tag_annotation_id_tag_id - Add unique index annotation_tag.annotation_id_tag_id V3"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="copy annotation_tag v2 to v3"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="drop table annotation_tag_v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Update alert annotations and set TEXT to empty"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add created time to annotation table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add updated time to annotation table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add index for created in annotation table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add index for updated in annotation table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Convert existing annotations from seconds to milliseconds"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add epoch_end column"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add index for epoch_end"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Make epoch_end the same as epoch"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Move region to single row"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Remove index org_id_epoch from annotation table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Remove index org_id_dashboard_id_panel_id_epoch from annotation table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add index for org_id_dashboard_id_epoch_end_epoch on annotation table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add index for org_id_epoch_end_epoch on annotation table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Remove index org_id_epoch_epoch_end from annotation table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add index for alert_id on annotation table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create test_data table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create dashboard_version table v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index dashboard_version.dashboard_id"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_version.dashboard_id and dashboard_version.version"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Set dashboard version to 1 where 0"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="save existing dashboard data in dashboard_version table v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="alter dashboard_version.data to mediumtext v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create team table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index team.org_id"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add unique index team_org_id_name"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create team member table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index team_member.org_id"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add unique index team_member_org_id_team_id_user_id"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index team_member.team_id"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add column email to team table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add column external to team_member table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add column permission to team_member table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create dashboard acl table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index dashboard_acl_dashboard_id"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_acl_dashboard_id_user_id"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_acl_dashboard_id_team_id"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="save default acl rules in dashboard_acl table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="delete acl rules for deleted dashboards and folders"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create tag table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index tag.key_value"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create login attempt table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index login_attempt.username"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_login_attempt_username - v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Rename table login_attempt to login_attempt_tmp_qwerty - v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create login_attempt v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create index IDX_login_attempt_username - v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="copy login_attempt v1 to v2"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="drop login_attempt_tmp_qwerty"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create user auth table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create index IDX_user_auth_auth_module_auth_id - v1"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="alter user_auth.auth_id to length 190"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add OAuth access token to user_auth"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add OAuth refresh token to user_auth"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add OAuth token type to user_auth"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add OAuth expiry to user_auth"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add index to user_id column in user_auth"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create server_lock table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index server_lock.operation_uid"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="create user auth token table"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add unique index user_auth_token.auth_token"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add unique index user_auth_token.prev_auth_token"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="add index user_auth_token.user_id"
+t=2021-03-27T14:40:40+0500 lvl=info msg="Executing migration" logger=migrator id="Add revoked_at to the user auth token"
+t=2021-03-27T14:40:41+0500 lvl=info msg="Executing migration" logger=migrator id="create cache_data table"
+t=2021-03-27T14:40:41+0500 lvl=info msg="Executing migration" logger=migrator id="add unique index cache_data.cache_key"
+t=2021-03-27T14:40:41+0500 lvl=info msg="Executing migration" logger=migrator id="create short_url table v1"
+t=2021-03-27T14:40:41+0500 lvl=info msg="Executing migration" logger=migrator id="add index short_url.org_id-uid"
+t=2021-03-27T14:40:41+0500 lvl=info msg="migrations completed" logger=migrator performed=279 skipped=0 duration=1.3664802s
+t=2021-03-27T14:40:41+0500 lvl=info msg="Created default admin" logger=sqlstore user=admin
+t=2021-03-27T14:40:41+0500 lvl=info msg="Created default organization" logger=sqlstore
+t=2021-03-27T14:40:41+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-03-27T14:40:41+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-03-27T14:40:41+0500 lvl=info msg="External plugins directory created" logger=plugins directory=C:\\Users\\inact1ve\\Desktop\\grafana-7.5.1\\data\\plugins
+t=2021-03-27T14:40:41+0500 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2021-03-27T14:40:52+0500 lvl=eror msg="Failed to look up user based on cookie" logger=context error="user token not found"
+t=2021-03-27T14:40:52+0500 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/ status=302 remote_addr=[::1] time_ms=1 size=29 referer=
+t=2021-03-27T14:40:59+0500 lvl=info msg="Successful Login" logger=http.server User=admin@localhost
+t=2021-03-27T14:41:49+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=636 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&utm_source=grafana_gettingstarted"
+t=2021-03-27T14:42:55+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=362 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&utm_source=grafana_gettingstarted"
+t=2021-03-27T14:43:03+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=362 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&utm_source=grafana_gettingstarted"
+t=2021-03-27T14:43:07+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1 size=364 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&utm_source=grafana_gettingstarted"
+t=2021-03-27T14:43:13+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=364 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&utm_source=grafana_gettingstarted"
+t=2021-03-27T14:43:26+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=123 size=271 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&utm_source=grafana_gettingstarted"
+t=2021-03-27T14:43:58+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=5 size=286 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&utm_source=grafana_gettingstarted"
+t=2021-03-27T14:44:02+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=4 size=285 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&utm_source=grafana_gettingstarted"
+t=2021-03-27T14:44:05+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=285 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&utm_source=grafana_gettingstarted"
+t=2021-03-27T14:44:19+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=285 referer="http://localhost:3000/dashboard/new?inspect=2&inspectTab=error&orgId=1&utm_source=grafana_gettingstarted"
+t=2021-03-27T14:44:44+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=636 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1"
+t=2021-03-27T14:44:47+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1 size=636 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1"
+t=2021-03-27T14:44:53+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=362 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:44:54+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=362 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:45:08+0500 lvl=eror msg="expression request error" logger=context userId=1 orgId=1 uname=admin error="rpc error: code = InvalidArgument desc = math command for refId B is missing an expression" remote_addr=[::1]
+t=2021-03-27T14:45:08+0500 lvl=eror msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/ds/query status=500 remote_addr=[::1] time_ms=2 size=38 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:45:30+0500 lvl=eror msg="expression request error" logger=context userId=1 orgId=1 uname=admin error="rpc error: code = InvalidArgument desc = math command for refId B is missing an expression" remote_addr=[::1]
+t=2021-03-27T14:45:30+0500 lvl=eror msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/ds/query status=500 remote_addr=[::1] time_ms=1 size=38 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:45:35+0500 lvl=eror msg="expression request error" logger=context userId=1 orgId=1 uname=admin error="rpc error: code = InvalidArgument desc = math command for refId B is missing an expression" remote_addr=[::1]
+t=2021-03-27T14:45:35+0500 lvl=eror msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/ds/query status=500 remote_addr=[::1] time_ms=1 size=38 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:45:37+0500 lvl=eror msg="expression request error" logger=context userId=1 orgId=1 uname=admin error="rpc error: code = InvalidArgument desc = math command for refId B is missing an expression" remote_addr=[::1]
+t=2021-03-27T14:45:37+0500 lvl=eror msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/ds/query status=500 remote_addr=[::1] time_ms=1 size=38 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:45:39+0500 lvl=eror msg="expression request error" logger=context userId=1 orgId=1 uname=admin error="rpc error: code = InvalidArgument desc = math command for refId B is missing an expression" remote_addr=[::1]
+t=2021-03-27T14:45:39+0500 lvl=eror msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/ds/query status=500 remote_addr=[::1] time_ms=0 size=38 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:46:22+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=4 size=284 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:46:26+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=284 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:46:28+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=5 size=284 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:46:37+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=6 size=284 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:46:42+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=4 size=284 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:47:36+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=4 size=284 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:48:02+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=280 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:50:18+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=280 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:50:27+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=6 size=280 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:52:19+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=11 size=280 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:52:21+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=28 size=280 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:52:50+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=6 size=303 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:52:52+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=303 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:52:53+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=303 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:53:33+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=4 size=523 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:53:45+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=523 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:54:40+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=473 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:54:42+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=473 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:55:16+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=6 size=473 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:55:19+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1 size=473 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:57:27+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=21 size=552 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:57:48+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=586 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:57:54+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=586 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:58:24+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1 size=617 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:58:35+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=644 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T14:58:49+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=641 referer="http://localhost:3000/dashboard/new?tab=query&editPanel=2&orgId=1"
+t=2021-03-27T15:06:33+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=229 size=987570 referer="http://localhost:3000/dashboard/new?from=1514772000000&to=1517439819000&tab=query&editPanel=2&orgId=1"
+t=2021-03-27T15:55:19+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:50586: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-03-27T15:55:26+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=636 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=4&orgId=1"
+t=2021-03-27T15:55:40+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=334 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=4&orgId=1"
+t=2021-03-27T15:56:15+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:50587: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-03-27T15:57:31+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=789 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=4&orgId=1"
+t=2021-03-27T15:58:07+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=789 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=4&orgId=1"
+t=2021-03-27T15:59:17+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=503 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=4&orgId=1"
+t=2021-03-27T16:02:52+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:53548: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-03-27T16:02:59+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=636 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=6&orgId=1"
+t=2021-03-27T16:06:34+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:53602: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-03-27T16:06:35+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:53557: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-03-27T16:07:48+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1 size=636 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=6&orgId=1"
+t=2021-03-27T16:09:58+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=358 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=6&orgId=1"
+t=2021-03-27T16:10:27+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=287 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=6&orgId=1"
+t=2021-03-27T16:10:32+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=287 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=6&orgId=1"
+t=2021-03-27T16:10:44+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=691 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=6&orgId=1"
+t=2021-03-27T16:11:34+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=25 size=319 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=6&orgId=1"
+t=2021-03-27T16:14:04+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1 size=636 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=8&orgId=1&from=1483236000000&to=1485903819000"
+t=2021-03-27T16:14:43+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=636 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=10&orgId=1&from=1483236000000&to=1485903819000"
+t=2021-03-27T16:15:14+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1 size=636 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=12&orgId=1&from=1483236000000&to=1485903819000"
+t=2021-03-27T16:15:45+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=636 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=14&orgId=1&from=1483236000000&to=1485903819000"
+t=2021-03-27T16:18:55+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=722 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=14&orgId=1&from=1388538000000&to=1546279200000"
+t=2021-03-27T16:21:18+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=699 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=12&orgId=1&from=1388538000000&to=1546279200000"
+t=2021-03-27T16:21:48+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=4 size=287 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=12&orgId=1&from=1388538000000&to=1546279200000"
+t=2021-03-27T16:21:58+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=5 size=287 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=12&orgId=1&from=1388538000000&to=1546279200000"
+t=2021-03-27T16:22:09+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=7 size=287 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=12&orgId=1&from=1388538000000&to=1546279200000"
+t=2021-03-27T16:22:24+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=30 size=287 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=12&orgId=1&from=1388538000000&to=1546279200000"
+t=2021-03-27T16:24:29+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=5 size=287 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=12&orgId=1&from=1388538000000&to=1546279200000"
+t=2021-03-27T16:24:44+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=287 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=14&orgId=1&from=1388538000000&to=1546279200000"
+t=2021-03-27T16:25:06+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=287 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=10&orgId=1&from=1388538000000&to=1546279200000"
+t=2021-03-27T16:25:18+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=5 size=287 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=8&orgId=1&from=1388538000000&to=1546279200000"
+t=2021-03-27T16:25:31+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=4 size=287 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=6&orgId=1&from=1388538000000&to=1546279200000"
+t=2021-03-27T16:35:15+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:54027: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-03-27T16:35:21+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:54040: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-03-27T16:39:38+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1 size=636 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=14&orgId=1"
+t=2021-03-27T16:39:40+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=287 referer="http://localhost:3000/d/keZhp9wMk/data?editPanel=14&orgId=1"
+t=2021-03-27T17:06:10+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:54487: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-03-27T17:06:11+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:54504: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-03-27T17:30:12+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:54830: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-03-27T17:30:13+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:54829: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-03-27T17:32:10+0500 lvl=info msg="Shutdown started" logger=server reason="System signal: terminated"
+t=2021-03-27T17:35:07+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-03-27T17:35:07+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1ve\\Desktop\\Test\\Client\\Client\\bin\\grafana/conf/defaults.ini
+t=2021-03-27T17:35:07+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1ve\\Desktop\\Test\\Client\\Client\\bin\\grafana
+t=2021-03-27T17:35:07+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1ve\\Desktop\\Test\\Client\\Client\\bin\\grafana\\data
+t=2021-03-27T17:35:07+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1ve\\Desktop\\Test\\Client\\Client\\bin\\grafana\\data\\log
+t=2021-03-27T17:35:07+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1ve\\Desktop\\Test\\Client\\Client\\bin\\grafana\\data\\plugins
+t=2021-03-27T17:35:07+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1ve\\Desktop\\Test\\Client\\Client\\bin\\grafana\\conf\\provisioning
+t=2021-03-27T17:35:07+0500 lvl=info msg="App mode production" logger=settings
+t=2021-03-27T17:35:07+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-03-27T17:35:07+0500 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=C:\\Users\\inact1ve\\Desktop\\Test\\Client\\Client\\bin\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-03-27T17:35:07+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-03-27T17:35:07+0500 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=0s
+t=2021-03-27T17:35:07+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-03-27T17:35:07+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-03-27T17:35:07+0500 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2021-03-27T17:35:14+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:54967: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-03-27T17:35:15+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:54966: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-03-27T17:45:42+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:55089: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-03-27T17:45:42+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:55088: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-03-27T17:48:13+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:55124: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-03-27T17:48:14+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:55123: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-03-27T17:51:47+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:55217: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-03-27T17:51:48+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:55243: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-03-27T17:58:15+0500 lvl=info msg="Shutdown started" logger=server reason="System signal: terminated"
+t=2021-06-08T15:25:52+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-06-08T15:25:52+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana/conf/defaults.ini
+t=2021-06-08T15:25:52+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana
+t=2021-06-08T15:25:52+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana\\data
+t=2021-06-08T15:25:52+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana\\data\\log
+t=2021-06-08T15:25:52+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana\\data\\plugins
+t=2021-06-08T15:25:52+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana\\conf\\provisioning
+t=2021-06-08T15:25:52+0500 lvl=info msg="App mode production" logger=settings
+t=2021-06-08T15:25:52+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-06-08T15:25:52+0500 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-06-08T15:25:52+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-06-08T15:25:52+0500 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=0s
+t=2021-06-08T15:25:52+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-06-08T15:25:52+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-06-08T15:25:52+0500 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2021-06-08T15:26:05+0500 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/ status=302 remote_addr=[::1] time_ms=0 size=29 referer=
+t=2021-06-08T15:26:10+0500 lvl=info msg="Successful Login" logger=http.server User=admin@localhost
+t=2021-06-08T15:27:08+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2060 size=481 referer=http://localhost:3000/datasources/edit/1/
+t=2021-06-08T15:27:45+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2031 size=499 referer=http://localhost:3000/datasources/edit/1/
+t=2021-06-08T15:28:28+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2034 size=481 referer=http://localhost:3000/datasources/edit/1/
+t=2021-06-08T15:29:16+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2039 size=473 referer=http://localhost:3000/datasources/edit/1/
+t=2021-06-08T15:29:29+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2031 size=473 referer=http://localhost:3000/datasources/edit/1/
+t=2021-06-08T15:31:34+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2046 size=529 referer=http://localhost:3000/datasources/edit/1/
+t=2021-06-08T15:31:49+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2341 size=205 referer=http://localhost:3000/datasources/edit/1/
+t=2021-06-08T15:31:58+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2046 size=529 referer=http://localhost:3000/datasources/edit/1/
+t=2021-06-08T15:34:49+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2056 size=529 referer=http://localhost:3000/datasources/edit/1/
+t=2021-06-08T15:34:53+0500 lvl=info msg="Shutdown started" logger=server reason="System signal: terminated"
+t=2021-06-08T15:35:53+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-06-08T15:35:53+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana/conf/defaults.ini
+t=2021-06-08T15:35:53+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana
+t=2021-06-08T15:35:53+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana\\data
+t=2021-06-08T15:35:53+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana\\data\\log
+t=2021-06-08T15:35:53+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana\\data\\plugins
+t=2021-06-08T15:35:53+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana\\conf\\provisioning
+t=2021-06-08T15:35:53+0500 lvl=info msg="App mode production" logger=settings
+t=2021-06-08T15:35:53+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-06-08T15:35:53+0500 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-06-08T15:35:53+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-06-08T15:35:53+0500 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=0s
+t=2021-06-08T15:35:53+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-06-08T15:35:53+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-06-08T15:35:53+0500 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2021-06-08T15:36:46+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2046 size=473 referer=http://localhost:3000/datasources/edit/2/
+t=2021-06-08T15:39:07+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2033 size=481 referer=http://localhost:3000/datasources/edit/2/
+t=2021-06-08T15:39:51+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2039 size=481 referer=http://localhost:3000/datasources/edit/2/
+t=2021-06-08T15:40:03+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2046 size=481 referer=http://localhost:3000/datasources/edit/2/
+t=2021-06-08T15:40:19+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2049 size=529 referer=http://localhost:3000/datasources/edit/2/
+t=2021-06-08T15:40:31+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2043 size=481 referer=http://localhost:3000/datasources/edit/2/
+t=2021-06-08T15:43:55+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2023 size=473 referer=http://localhost:3000/datasources/edit/2/
+t=2021-06-08T15:44:11+0500 lvl=info msg="Shutdown started" logger=server reason="System signal: terminated"
+t=2021-06-08T15:44:16+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-06-08T15:44:16+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana/conf/defaults.ini
+t=2021-06-08T15:44:16+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana
+t=2021-06-08T15:44:16+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana\\data
+t=2021-06-08T15:44:16+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana\\data\\log
+t=2021-06-08T15:44:16+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana\\data\\plugins
+t=2021-06-08T15:44:16+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana\\conf\\provisioning
+t=2021-06-08T15:44:16+0500 lvl=info msg="App mode production" logger=settings
+t=2021-06-08T15:44:16+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-06-08T15:44:16+0500 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-06-08T15:44:16+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-06-08T15:44:16+0500 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=520.7µs
+t=2021-06-08T15:44:16+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-06-08T15:44:16+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-06-08T15:44:16+0500 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2021-06-08T15:44:33+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2020 size=481 referer=http://localhost:3000/datasources/edit/2/
+t=2021-06-08T15:44:47+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2042 size=473 referer=http://localhost:3000/datasources/edit/2/
+t=2021-06-08T15:45:34+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=15009 size=343 referer=http://localhost:3000/datasources/edit/2/
+t=2021-06-08T15:45:47+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2035 size=481 referer=http://localhost:3000/datasources/edit/2/
+t=2021-06-08T15:46:02+0500 lvl=info msg="Shutdown started" logger=server reason="System signal: terminated"
+t=2021-06-08T15:51:29+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-06-08T15:51:29+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana/conf/defaults.ini
+t=2021-06-08T15:51:29+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana
+t=2021-06-08T15:51:29+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana\\data
+t=2021-06-08T15:51:29+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana\\data\\log
+t=2021-06-08T15:51:29+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana\\data\\plugins
+t=2021-06-08T15:51:29+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana\\conf\\provisioning
+t=2021-06-08T15:51:29+0500 lvl=info msg="App mode production" logger=settings
+t=2021-06-08T15:51:29+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-06-08T15:51:29+0500 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\bin\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-06-08T15:51:29+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-06-08T15:51:29+0500 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=512.8µs
+t=2021-06-08T15:51:29+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-06-08T15:51:29+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-06-08T15:51:29+0500 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2021-06-08T15:52:26+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2042 size=481 referer=http://localhost:3000/datasources/edit/2/
+t=2021-06-08T15:52:56+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2031 size=499 referer=http://localhost:3000/datasources/edit/2/
+t=2021-06-08T15:54:05+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2032 size=529 referer=http://localhost:3000/datasources/edit/2/
+t=2021-06-08T15:54:12+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2024 size=473 referer=http://localhost:3000/datasources/edit/2/
+t=2021-06-08T15:55:42+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2032 size=782 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1"
+t=2021-06-08T15:56:19+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2037 size=782 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=now-5y&to=now"
+t=2021-06-08T15:57:22+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2015 size=481 referer=http://localhost:3000/datasources/edit/3/
+t=2021-06-08T15:58:31+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2052 size=481 referer=http://localhost:3000/datasources/edit/3/
+t=2021-06-08T16:02:30+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=36 size=636 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1"
+t=2021-06-08T16:03:21+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=9 size=636 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T16:03:30+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1 size=636 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T16:04:13+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=634 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T16:04:29+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=615 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T16:04:48+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1 size=623 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T16:05:09+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=603 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T16:05:19+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=604 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T16:05:20+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1 size=604 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T16:05:21+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1 size=604 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T16:05:35+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=589 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T16:05:38+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=589 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T16:05:42+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=589 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T16:05:49+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=4 size=1091 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T16:06:01+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=1050 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T16:06:10+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=1050 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T16:06:20+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=1009 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T16:06:31+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=102 size=1056 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T16:09:30+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=99 size=1056 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T17:11:17+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=142 size=1080 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T17:11:22+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=144 size=1056 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T17:16:34+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=127 size=1056 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T17:16:42+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=1056 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T17:16:52+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=1064 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T17:17:26+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=1125 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T17:17:34+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=993 size=6047233 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T17:17:53+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:51919: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T17:17:53+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=985 size=3818 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T17:17:54+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:55130: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T17:17:54+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=996 size=3818 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T17:17:55+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=996 size=7846654 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T17:17:58+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1046 size=6047233 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T17:18:16+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=938 size=6047233 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T17:18:53+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1000 size=7846654 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T17:18:56+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:54785: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T17:18:56+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1028 size=3818 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T17:18:56+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1106 size=6047233 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T17:19:08+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:50903: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T17:19:08+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1330 size=3818 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T17:19:08+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1294 size=6047233 referer="http://localhost:3000/dashboard/new?editPanel=2&orgId=1&from=1398621600000&to=1524941999000"
+t=2021-06-08T17:19:14+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:59253: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T17:19:14+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1286 size=3818 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?orgId=1"
+t=2021-06-08T17:19:14+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1285 size=6047233 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?orgId=1"
+t=2021-06-08T17:19:28+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:54542: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T17:19:28+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1264 size=3818 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?orgId=1"
+t=2021-06-08T17:19:28+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1271 size=6047233 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?orgId=1"
+t=2021-06-08T17:19:48+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1022 size=6047233 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1"
+t=2021-06-08T17:19:50+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1160 size=6047233 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1"
+t=2021-06-08T17:20:41+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=947 size=6047233 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1"
+t=2021-06-08T17:20:56+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=939 size=7846654 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1"
+t=2021-06-08T17:21:00+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1032 size=6047233 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1"
+t=2021-06-08T17:21:03+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=478 size=3021082 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1461783600000&to=1524941999000"
+t=2021-06-08T17:21:12+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1168 size=7548355 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:21:30+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=94 size=1106 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:21:43+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1155 size=7548355 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:22:12+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1034 size=7548252 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:22:17+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1101 size=7548252 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:22:26+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=979 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:22:31+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1 size=979 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:22:47+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=985 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:23:00+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=984 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:23:13+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1008 size=7548252 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:23:48+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1025 size=7548220 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:25:16+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1302 size=9797610 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:25:18+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:60426: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T17:25:18+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=928 size=3818 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:25:19+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=911 size=6729953 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:25:33+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=844 size=6729953 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:25:37+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1 size=595 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:25:38+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=835 size=6729953 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:26:10+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=864 size=6729951 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:26:25+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=417 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:26:39+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=414 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:27:08+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=22 size=621 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:27:22+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=591 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:27:36+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=661 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=2&orgId=1&from=1272391200000&to=1588100399000"
+t=2021-06-08T17:29:15+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:62879: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:03:14+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:58790: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:03:25+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:52188: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:03:35+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1 size=636 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=4&orgId=1"
+t=2021-06-08T18:03:58+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:58246: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:04:15+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:56962: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:04:26+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=6 size=591 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=4&orgId=1"
+t=2021-06-08T18:04:48+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=571 referer="http://localhost:3000/d/BGNHJ8eMk/new-dashboard-copy?editPanel=4&orgId=1"
+t=2021-06-08T18:05:44+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:63223: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:05:46+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:58447: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:06:13+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1 size=636 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=6&orgId=1"
+t=2021-06-08T18:06:35+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:60091: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:09:10+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:64892: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:09:13+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1 size=636 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=8&orgId=1"
+t=2021-06-08T18:09:45+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=636 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=10&orgId=1"
+t=2021-06-08T18:12:03+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=971 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=10&orgId=1"
+t=2021-06-08T18:12:18+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=712 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=10&orgId=1"
+t=2021-06-08T18:12:27+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1 size=731 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=10&orgId=1"
+t=2021-06-08T18:12:33+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=731 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=10&orgId=1"
+t=2021-06-08T18:12:40+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=728 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=10&orgId=1"
+t=2021-06-08T18:12:49+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=35 size=735 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=10&orgId=1"
+t=2021-06-08T18:12:54+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=31 size=735 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=10&orgId=1"
+t=2021-06-08T18:12:59+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=973 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=10&orgId=1"
+t=2021-06-08T18:13:17+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=981 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=10&orgId=1"
+t=2021-06-08T18:13:25+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=981 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=10&orgId=1"
+t=2021-06-08T18:13:27+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=981 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=10&orgId=1"
+t=2021-06-08T18:13:37+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=982 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=10&orgId=1"
+t=2021-06-08T18:13:39+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=982 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=10&orgId=1"
+t=2021-06-08T18:14:49+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=21 size=511 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=8&orgId=1"
+t=2021-06-08T18:16:17+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=636 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=12&orgId=1"
+t=2021-06-08T18:16:20+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=22 size=509 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=12&orgId=1"
+t=2021-06-08T18:16:54+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1 size=636 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=14&orgId=1"
+t=2021-06-08T18:16:57+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=21 size=509 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=14&orgId=1"
+t=2021-06-08T18:18:20+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=28 size=688 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=14&orgId=1"
+t=2021-06-08T18:18:32+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=670 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=14&orgId=1"
+t=2021-06-08T18:18:44+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=556 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=14&orgId=1"
+t=2021-06-08T18:19:46+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=478 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=6&orgId=1"
+t=2021-06-08T18:20:45+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1 size=636 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=16&orgId=1"
+t=2021-06-08T18:20:47+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=478 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=16&orgId=1"
+t=2021-06-08T18:21:26+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=636 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=18&orgId=1"
+t=2021-06-08T18:21:29+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=3 size=478 referer="http://localhost:3000/d/BGNHJ8eMk/za-vse-vremia?editPanel=18&orgId=1"
+t=2021-06-08T18:22:59+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:60721: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:23:01+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:54294: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:23:28+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:49340: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:23:29+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:57540: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:23:51+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:60092: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:23:53+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:49302: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:24:01+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:50400: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:24:03+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:62852: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:24:44+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:54228: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:24:47+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:61276: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:24:49+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:57565: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:24:54+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:56778: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:25:13+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:60758: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:25:16+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:62670: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:25:50+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:53168: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:27:18+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:52138: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:27:30+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:60456: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:27:36+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:59853: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:27:45+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:49817: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:28:20+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:54607: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:30:49+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:61691: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:31:06+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:56110: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:31:08+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:58144: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:31:08+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:62154: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:31:10+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:60370: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:31:12+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:60117: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:31:14+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:50133: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:32:53+0500 lvl=info msg="Shutdown started" logger=server reason="System signal: terminated"
+t=2021-06-08T18:47:23+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-06-08T18:47:23+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana/conf/defaults.ini
+t=2021-06-08T18:47:23+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana
+t=2021-06-08T18:47:23+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data
+t=2021-06-08T18:47:23+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\log
+t=2021-06-08T18:47:23+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\plugins
+t=2021-06-08T18:47:23+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\conf\\provisioning
+t=2021-06-08T18:47:23+0500 lvl=info msg="App mode production" logger=settings
+t=2021-06-08T18:47:23+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-06-08T18:47:23+0500 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-06-08T18:47:23+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-06-08T18:47:23+0500 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=0s
+t=2021-06-08T18:47:23+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-06-08T18:47:24+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-06-08T18:47:24+0500 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2021-06-08T18:47:32+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-06-08T18:47:32+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana/conf/defaults.ini
+t=2021-06-08T18:47:32+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana
+t=2021-06-08T18:47:32+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data
+t=2021-06-08T18:47:32+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\log
+t=2021-06-08T18:47:32+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\plugins
+t=2021-06-08T18:47:32+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\conf\\provisioning
+t=2021-06-08T18:47:32+0500 lvl=info msg="App mode production" logger=settings
+t=2021-06-08T18:47:32+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-06-08T18:47:32+0500 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-06-08T18:47:32+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-06-08T18:47:32+0500 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=999.8µs
+t=2021-06-08T18:47:32+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-06-08T18:47:32+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-06-08T18:47:32+0500 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:47:33+0500 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:47:33+0500 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:47:33+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=36 size=363 referer="http://localhost:3000/d/keZhp9wMk/data?orgId=1"
+t=2021-06-08T18:47:33+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=31 size=363 referer="http://localhost:3000/d/keZhp9wMk/data?orgId=1"
+t=2021-06-08T18:47:33+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=39 size=2311 referer="http://localhost:3000/d/keZhp9wMk/data?orgId=1"
+t=2021-06-08T18:47:33+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=34 size=363 referer="http://localhost:3000/d/keZhp9wMk/data?orgId=1"
+t=2021-06-08T18:47:33+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=42 size=2129 referer="http://localhost:3000/d/keZhp9wMk/data?orgId=1"
+t=2021-06-08T18:47:33+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1 size=363 referer="http://localhost:3000/d/keZhp9wMk/data?orgId=1"
+t=2021-06-08T18:47:33+0500 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=2 size=363 referer="http://localhost:3000/d/keZhp9wMk/data?orgId=1"
+t=2021-06-08T18:48:10+0500 lvl=eror msg="Error writing to response" logger=context userId=1 orgId=1 uname=admin err="write tcp [::1]:3000->[::1]:57628: wsasend: An established connection was aborted by the software in your host machine."
+t=2021-06-08T18:48:41+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-06-08T18:48:41+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana/conf/defaults.ini
+t=2021-06-08T18:48:41+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana
+t=2021-06-08T18:48:41+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data
+t=2021-06-08T18:48:41+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\log
+t=2021-06-08T18:48:41+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\plugins
+t=2021-06-08T18:48:41+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\conf\\provisioning
+t=2021-06-08T18:48:41+0500 lvl=info msg="App mode production" logger=settings
+t=2021-06-08T18:48:41+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-06-08T18:48:41+0500 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-06-08T18:48:41+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-06-08T18:48:41+0500 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=512.5µs
+t=2021-06-08T18:48:41+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-06-08T18:48:41+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-06-08T18:48:41+0500 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:48:41+0500 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:48:41+0500 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:48:44+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-06-08T18:48:44+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana/conf/defaults.ini
+t=2021-06-08T18:48:44+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana
+t=2021-06-08T18:48:44+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data
+t=2021-06-08T18:48:44+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\log
+t=2021-06-08T18:48:44+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\plugins
+t=2021-06-08T18:48:44+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\conf\\provisioning
+t=2021-06-08T18:48:44+0500 lvl=info msg="App mode production" logger=settings
+t=2021-06-08T18:48:44+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-06-08T18:48:44+0500 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-06-08T18:48:44+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-06-08T18:48:44+0500 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=1.5289ms
+t=2021-06-08T18:48:44+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-06-08T18:48:45+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-06-08T18:48:45+0500 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:48:45+0500 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:48:45+0500 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:53:53+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-06-08T18:53:53+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana/conf/defaults.ini
+t=2021-06-08T18:53:53+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana
+t=2021-06-08T18:53:53+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data
+t=2021-06-08T18:53:53+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\log
+t=2021-06-08T18:53:53+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\plugins
+t=2021-06-08T18:53:53+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\conf\\provisioning
+t=2021-06-08T18:53:53+0500 lvl=info msg="App mode production" logger=settings
+t=2021-06-08T18:53:53+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-06-08T18:53:53+0500 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-06-08T18:53:53+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-06-08T18:53:53+0500 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=997.8µs
+t=2021-06-08T18:53:53+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-06-08T18:53:54+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-06-08T18:53:54+0500 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:53:54+0500 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:53:54+0500 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:54:10+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-06-08T18:54:10+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana/conf/defaults.ini
+t=2021-06-08T18:54:10+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana
+t=2021-06-08T18:54:10+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data
+t=2021-06-08T18:54:10+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\log
+t=2021-06-08T18:54:10+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\plugins
+t=2021-06-08T18:54:10+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\conf\\provisioning
+t=2021-06-08T18:54:10+0500 lvl=info msg="App mode production" logger=settings
+t=2021-06-08T18:54:10+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-06-08T18:54:10+0500 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-06-08T18:54:10+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-06-08T18:54:10+0500 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=999.4µs
+t=2021-06-08T18:54:10+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-06-08T18:54:10+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-06-08T18:54:10+0500 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:54:10+0500 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:54:10+0500 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:56:24+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-06-08T18:56:24+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana/conf/defaults.ini
+t=2021-06-08T18:56:24+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana
+t=2021-06-08T18:56:24+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data
+t=2021-06-08T18:56:24+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\log
+t=2021-06-08T18:56:24+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\plugins
+t=2021-06-08T18:56:24+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\conf\\provisioning
+t=2021-06-08T18:56:24+0500 lvl=info msg="App mode production" logger=settings
+t=2021-06-08T18:56:24+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-06-08T18:56:24+0500 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-06-08T18:56:24+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-06-08T18:56:24+0500 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=516.2µs
+t=2021-06-08T18:56:24+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-06-08T18:56:24+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-06-08T18:56:24+0500 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:56:24+0500 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:56:24+0500 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:56:28+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-06-08T18:56:28+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana/conf/defaults.ini
+t=2021-06-08T18:56:28+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana
+t=2021-06-08T18:56:28+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data
+t=2021-06-08T18:56:28+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\log
+t=2021-06-08T18:56:28+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\plugins
+t=2021-06-08T18:56:28+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\conf\\provisioning
+t=2021-06-08T18:56:28+0500 lvl=info msg="App mode production" logger=settings
+t=2021-06-08T18:56:28+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-06-08T18:56:28+0500 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-06-08T18:56:28+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-06-08T18:56:28+0500 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=1.0276ms
+t=2021-06-08T18:56:28+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-06-08T18:56:28+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-06-08T18:56:28+0500 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:56:29+0500 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:56:29+0500 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:57:28+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-06-08T18:57:28+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana/conf/defaults.ini
+t=2021-06-08T18:57:28+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana
+t=2021-06-08T18:57:28+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data
+t=2021-06-08T18:57:28+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\log
+t=2021-06-08T18:57:28+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\plugins
+t=2021-06-08T18:57:28+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\conf\\provisioning
+t=2021-06-08T18:57:28+0500 lvl=info msg="App mode production" logger=settings
+t=2021-06-08T18:57:28+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-06-08T18:57:28+0500 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-06-08T18:57:28+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-06-08T18:57:28+0500 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=531.8µs
+t=2021-06-08T18:57:28+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-06-08T18:57:28+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-06-08T18:57:28+0500 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:57:28+0500 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:57:28+0500 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:57:51+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-06-08T18:57:51+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana/conf/defaults.ini
+t=2021-06-08T18:57:51+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana
+t=2021-06-08T18:57:51+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data
+t=2021-06-08T18:57:51+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\log
+t=2021-06-08T18:57:51+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\plugins
+t=2021-06-08T18:57:51+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\conf\\provisioning
+t=2021-06-08T18:57:51+0500 lvl=info msg="App mode production" logger=settings
+t=2021-06-08T18:57:51+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-06-08T18:57:51+0500 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-06-08T18:57:51+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-06-08T18:57:51+0500 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=512.6µs
+t=2021-06-08T18:57:51+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-06-08T18:57:51+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-06-08T18:57:52+0500 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:57:52+0500 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:57:52+0500 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:57:53+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-06-08T18:57:53+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana/conf/defaults.ini
+t=2021-06-08T18:57:53+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana
+t=2021-06-08T18:57:53+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data
+t=2021-06-08T18:57:53+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\log
+t=2021-06-08T18:57:53+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\plugins
+t=2021-06-08T18:57:53+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\conf\\provisioning
+t=2021-06-08T18:57:53+0500 lvl=info msg="App mode production" logger=settings
+t=2021-06-08T18:57:53+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-06-08T18:57:53+0500 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-06-08T18:57:53+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-06-08T18:57:53+0500 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=1.5349ms
+t=2021-06-08T18:57:53+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-06-08T18:57:53+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-06-08T18:57:53+0500 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:57:53+0500 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:57:53+0500 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:59:45+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-06-08T18:59:45+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana/conf/defaults.ini
+t=2021-06-08T18:59:45+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana
+t=2021-06-08T18:59:45+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data
+t=2021-06-08T18:59:45+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\log
+t=2021-06-08T18:59:45+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\plugins
+t=2021-06-08T18:59:45+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\conf\\provisioning
+t=2021-06-08T18:59:45+0500 lvl=info msg="App mode production" logger=settings
+t=2021-06-08T18:59:45+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-06-08T18:59:45+0500 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-06-08T18:59:45+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-06-08T18:59:45+0500 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=999.4µs
+t=2021-06-08T18:59:45+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-06-08T18:59:45+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-06-08T18:59:45+0500 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:59:45+0500 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:59:45+0500 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:59:46+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-06-08T18:59:46+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana/conf/defaults.ini
+t=2021-06-08T18:59:46+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana
+t=2021-06-08T18:59:46+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data
+t=2021-06-08T18:59:46+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\log
+t=2021-06-08T18:59:46+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\plugins
+t=2021-06-08T18:59:46+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\conf\\provisioning
+t=2021-06-08T18:59:46+0500 lvl=info msg="App mode production" logger=settings
+t=2021-06-08T18:59:46+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-06-08T18:59:46+0500 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-06-08T18:59:46+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-06-08T18:59:46+0500 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=0s
+t=2021-06-08T18:59:46+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-06-08T18:59:47+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-06-08T18:59:47+0500 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:59:47+0500 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:59:47+0500 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:59:48+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-06-08T18:59:48+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana/conf/defaults.ini
+t=2021-06-08T18:59:48+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana
+t=2021-06-08T18:59:48+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data
+t=2021-06-08T18:59:48+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\log
+t=2021-06-08T18:59:48+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\plugins
+t=2021-06-08T18:59:48+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\conf\\provisioning
+t=2021-06-08T18:59:48+0500 lvl=info msg="App mode production" logger=settings
+t=2021-06-08T18:59:48+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-06-08T18:59:48+0500 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-06-08T18:59:48+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-06-08T18:59:48+0500 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=512.2µs
+t=2021-06-08T18:59:48+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-06-08T18:59:49+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-06-08T18:59:49+0500 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:59:49+0500 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T18:59:49+0500 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T19:00:00+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-06-08T19:00:00+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana/conf/defaults.ini
+t=2021-06-08T19:00:00+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana
+t=2021-06-08T19:00:00+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data
+t=2021-06-08T19:00:00+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\log
+t=2021-06-08T19:00:00+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\plugins
+t=2021-06-08T19:00:00+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\conf\\provisioning
+t=2021-06-08T19:00:00+0500 lvl=info msg="App mode production" logger=settings
+t=2021-06-08T19:00:00+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-06-08T19:00:00+0500 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-06-08T19:00:00+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-06-08T19:00:00+0500 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=516.7µs
+t=2021-06-08T19:00:00+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-06-08T19:00:01+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-06-08T19:00:01+0500 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T19:00:01+0500 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T19:00:01+0500 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T19:00:02+0500 lvl=info msg="Starting Grafana" logger=server version=7.5.1 commit=4dffb875cf branch=HEAD compiled=2021-03-26T18:12:21+0500
+t=2021-06-08T19:00:02+0500 lvl=info msg="Config loaded from" logger=settings file=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana/conf/defaults.ini
+t=2021-06-08T19:00:02+0500 lvl=info msg="Path Home" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana
+t=2021-06-08T19:00:02+0500 lvl=info msg="Path Data" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data
+t=2021-06-08T19:00:02+0500 lvl=info msg="Path Logs" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\log
+t=2021-06-08T19:00:02+0500 lvl=info msg="Path Plugins" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\plugins
+t=2021-06-08T19:00:02+0500 lvl=info msg="Path Provisioning" logger=settings path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\conf\\provisioning
+t=2021-06-08T19:00:02+0500 lvl=info msg="App mode production" logger=settings
+t=2021-06-08T19:00:02+0500 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2021-06-08T19:00:02+0500 lvl=warn msg="SQLite database file has broader permissions than it should" logger=sqlstore path=C:\\Users\\inact1veof\\Desktop\\sss\\ASPService\\WebApplication1\\grafana\\data\\grafana.db mode=-rw-rw-rw- expected=-rw-r-----
+t=2021-06-08T19:00:02+0500 lvl=info msg="Starting DB migrations" logger=migrator
+t=2021-06-08T19:00:02+0500 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=1.0039ms
+t=2021-06-08T19:00:02+0500 lvl=info msg="Starting plugin search" logger=plugins
+t=2021-06-08T19:00:02+0500 lvl=info msg="Registering plugin" logger=plugins id=input
+t=2021-06-08T19:00:02+0500 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T19:00:03+0500 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+t=2021-06-08T19:00:03+0500 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."

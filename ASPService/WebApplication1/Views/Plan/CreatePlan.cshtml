@@ -1,0 +1,44 @@
+﻿@model WebApplication1.Models.Plan
+@{
+    ViewBag.Title = "Добавление нового плана";
+}
+
+<h2>@ViewBag.Title</h2>
+@using (Html.BeginForm("CreatePlan", "Plan", FormMethod.Post))
+{
+<fieldset>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Date, "Дата", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Date, new { @class = "form-control", @type = "date" })
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(m => m.DeviceId, "Прибор учета", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.DeviceId, ViewBag.Devices as SelectList, new { @class = "form-control" })
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(m => m.AlgId, "План на основе", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.AlgId, ViewBag.Algoritms as SelectList, new { @class = "form-control" })
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Создать" />
+        </div>
+    </div>
+</fieldset>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

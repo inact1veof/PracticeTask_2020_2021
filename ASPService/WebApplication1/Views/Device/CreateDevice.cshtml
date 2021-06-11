@@ -1,0 +1,37 @@
+﻿@model WebApplication1.Models.Device
+@{
+    ViewBag.Title = "Добавление нового прибора учета";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("CreateDevice", "Device", FormMethod.Post))
+{
+<fieldset>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Burden_Id, "Нагрузка", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.Burden_Id, ViewBag.Burdens as SelectList, new { @class = "form-control" })
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name, "Название", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.EditorFor(m => m.Name, "Наименование", new { @class = "form-control" })
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Создать" />
+        </div>
+    </div>
+</fieldset>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+

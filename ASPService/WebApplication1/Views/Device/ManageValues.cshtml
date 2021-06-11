@@ -1,0 +1,36 @@
+﻿@model WebApplication1.Models.DeviceValues
+@{
+    ViewBag.Title = "Управление данными прибора учета";
+}
+
+<h2>@ViewBag.Title</h2>
+<h3>Наименование прибора: @Model.device.Name (id: @Model.device.Id)</h3>
+<h4>Количество данных для текущего прибора: @Model.CountValues</h4>
+<h4>Предварительный просмотр данных:</h4>
+@Html.ListBoxFor(m => m.value, ViewBag.Values as SelectList, new { @class = "form-control" })
+<br />
+<br />
+@if (Model.CountValues == 0)
+{
+    <h4>Загрузить данные для прибора учета</h4>
+    using (Html.BeginForm("Upload", "Device", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <input type="file" name="upload" />
+        <br>
+        <input type="submit" value="Загрузить" />
+    }
+}
+else
+{
+    using (Html.BeginForm("ManageValues", "Device", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Очистить значения" />
+        </div>
+    </div>
+    }
+}
+
+
+

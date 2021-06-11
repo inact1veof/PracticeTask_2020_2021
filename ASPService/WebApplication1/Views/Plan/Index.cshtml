@@ -1,0 +1,39 @@
+﻿@model IEnumerable <WebApplication1.Models.OutputPlan>
+@{
+    ViewBag.Title = "Управление планом энергопотребления";
+}
+
+<h2>@ViewBag.Title <button type="button" onclick="location.href = '@Url.Action("CreatePlan")'" style="font-size:18px; float:right" class=" btn btn-default">Создать план</button></h2>
+<h3>Существующие планы по датам:</h3>
+<table class="table">
+    <tr>
+        <th width="10%">
+            Id
+        </th>
+        <th width="30%">
+            Дата
+        </th>
+        <th width="30%">
+            Прибор учета
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Device)
+            </td>
+            <td>
+                @Html.ActionLink("Просмотр |", "EditPlan", new { id = item.Id })
+                @Html.ActionLink(" Удалить", "DeletePlan", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>

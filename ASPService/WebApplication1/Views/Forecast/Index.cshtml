@@ -1,0 +1,60 @@
+﻿@model IEnumerable <WebApplication1.Models.SuperForecasts>
+@{
+    ViewBag.Title = "Управление прогнозами";
+}
+
+<h2>@ViewBag.Title <button type="button" onclick="location.href = '@Url.Action("CreateForecast")'" style="font-size:18px; float:right" class=" btn btn-default">Добавить новый прогноз</button></h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Дата для прогноза
+        </th>
+        <th>
+            Прибор учета
+        </th>
+        <th>
+            Алгоритм
+        </th>
+        <th>
+            Значение
+        </th>
+        <th>
+            Значение RMSE
+        </th>
+        <th>
+            Действие
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Id)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DateForForecast)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DeviceName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Algoritm)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Value)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.RmseValue)
+    </td>
+    <td>
+        @Html.ActionLink("Графики |", "Grafana")
+        @Html.ActionLink(" Удалить", "DeleteForecast", new { id = item.Id })
+    </td>
+</tr>
+    }
+</table>
